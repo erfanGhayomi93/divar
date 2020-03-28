@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import context from "./context";
 import "./App.css";
-import Start from "./component/Start";
 import axios from "axios";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Cities from "./component/Cities";
+import HandleRouteStart from "./component/HandleRouteStart";
 
 function App() {
   const [modalCity, setModalCity] = useState(false);
@@ -50,15 +50,14 @@ function App() {
       }}
     >
       <Router>
-        <Route path={`/`}>
-          <Start />
-        </Route>
-        {/* <Redirect from="/" to={data.city} /> */}
 
+        <HandleRouteStart />
         {modalCity ? <Cities activeCity={data.city} /> : null}
+
       </Router>
     </context.Provider>
   );
 }
 
 export default App;
+/* <Redirect from="/" to={data.city} /> */

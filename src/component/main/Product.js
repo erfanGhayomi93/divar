@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Product({ value }) {
+
   return (
     <div className="product" >
-      <Link to="/test">
+      <Link to={`/${value.data.token}`}>
         <article className="item">
           <p className="title">{value.data.title}</p>
           <p className="price">{value.data.description}</p>

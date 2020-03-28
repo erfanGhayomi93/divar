@@ -2,7 +2,6 @@
   src: url(./fonts/BYekan.eot);
   src: url(./fonts/BYekan.otf);
   src: url(./fonts/BYekan.ttf);
-  src: url(./fonts/BYekan.woff);
 
   font-family: "Byekan";
 }
@@ -12,7 +11,7 @@
 .border-color {
   border-color: #a62626 !important;
 }
-.active-city{
+.active-city ,.button-call{
   background-color: #a62626 !important;
   color: white !important;
 }
@@ -332,4 +331,70 @@ header .menu .item .location span:nth-child(1) {
   background-color: #a62626;
   color: white;
   transition: all 0.2s ease;
+}
+.Detail-products{
+  width: 75%;
+  margin: auto;
+  margin-top: 1em;
+  direction: rtl;
+  min-height: 130vh;
+}
+.Detail-products .header-details{
+  width: 100%;
+  background-color: #FAFAFA;
+  text-align: right;
+  border: 1px solid #ededed;
+}
+.Detail-products .header-details a{
+  padding: 10px 16px;
+  cursor: pointer;
+  border-left: 1px solid #ededed;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.2 ease-out;
+  color: inherit;
+}
+.Detail-products .header-details a:hover{
+  background-color: #f5f5f5;
+  transition: all 0.2 ease-in;
+}
+.Detail-products .body-details{
+  display: flex;
+  margin-top: 28px;
+}
+.Detail-products .body-details .item-text{
+  flex: 0 0 40%;
+  margin-left: 10%;
+  text-align: right;
+}
+.Detail-products .body-details .item-slider{
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.Detail-products .body-details .item-text .button-details .item{
+  padding: 5px 15px;
+  border : 1px solid black;
+  margin: 0 0 0 5px;
+  display: inline-block;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.Detail-products .body-details .item-text .table-category{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ededed;
+}
+.Detail-products .body-details .item-slider .gallery{
+  /* direction: ltr !important; */
+}
+.Detail-products .body-details .item-slider .gallery .item-gallery{
+  width: 100% !important;
+  height: 500px;
+}
+.Detail-products .body-details .item-slider .gallery .item-thumbnail{
+  width: 72px;
+  height: 72px;
+  margin-top: 20px;
+  cursor: pointer;
 }

@@ -1,11 +1,12 @@
-import React, { }  from "react";
+import React from "react";
 import { Switch, Route } from "react-router-dom";
 import SubmenuOne from "./submenu-one";
 import SubmenuTwo from "./submenu-two";
 import { dataSubmenuTwo, dataSubmenuThree } from "./data";
 import SubmenuThree from "./submenu-three";
-// import context from "../../context";
+import DetailsProducts from "./../main/DetailProducts";
 
+// import context from "../../context";
 
 export default function HandleRouteSidebar() {
   // const {data} = useContext(context)
@@ -37,10 +38,18 @@ export default function HandleRouteSidebar() {
         {Object.keys(dataSubmenuThree).map((data, ind) =>
           dataSubmenuThree[data].item.map(auth => (
             <Route key={ind} path={`/${auth.route}`} exact>
-              <SubmenuThree content={dataSubmenuThree[data]  } status = "END-LEVEL" />
+              <SubmenuThree
+                content={dataSubmenuThree[data]}
+                status="END-LEVEL"
+              />
             </Route>
           ))
         )}
+
+        <Route path={`test`} exact>
+          <DetailsProducts />
+        </Route>
+
       </Switch>
     </div>
   );
