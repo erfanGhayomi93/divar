@@ -16,12 +16,10 @@
   background-color: #a62626 !important;
   color: white !important;
 }
-.wrapper {
-  font-family: "Byekan";
-}
 .header {
   width: 100%;
   height: 65px;
+  font-family: "Byekan";
 }
 .content {
   display: flex;
@@ -32,6 +30,7 @@
 }
 .sidebar {
   flex: 0 0 280px;
+  font-family: "Byekan";
 }
 .main .search {
   padding: 1.75rem;
@@ -74,6 +73,7 @@
   line-height: 1.75rem;
   outline: none;
   transition: all 0.1s ease;
+  font-family: "Byekan";
 }
 .main .customButton:hover {
   background-color: #a62626;
@@ -102,6 +102,7 @@
   margin: 50px 20px;
   border-top: 1px solid rgba(0, 0, 0, 0.12);
   position: relative;
+  font-family: "Byekan";
 }
 .main .product-list .seo_details {
   position: absolute;
@@ -307,6 +308,7 @@ header .menu .item .location span:nth-child(1) {
   color: rgba(0, 0, 0, 0.87);
   border-radius: 5px;
   padding: 10px 20px 50px;
+  font-family: "Byekan";
 }
 .modal-city .close {
   cursor: pointer;
@@ -339,6 +341,7 @@ header .menu .item .location span:nth-child(1) {
   margin-top: 1em;
   direction: rtl;
   min-height: 130vh;
+  font-family: "Byekan";
 }
 .Detail-products .header-details {
   width: 100%;
@@ -403,10 +406,13 @@ header .menu .item .location span:nth-child(1) {
 .Detail-products .body-details .item-slider .gallery .item-gallery {
   width: 100% !important;
   height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .Detail-products .body-details .item-slider .gallery .item-thumbnail {
   width: 72px;
   height: 72px;
   margin-top: 20px;
   cursor: pointer;
+  background-position: center center;
 }

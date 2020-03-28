@@ -7,8 +7,6 @@ export default function DetailProducts({ data }) {
   const { clickedFilter } = useContext(context);
   const history = useHistory();
 
-  // console.log(data);
-
   return (
     <div className="Detail-products">
       <div className="header-details">
