@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import noPicture from "./no-picture.png";
+
 
 export default function Product({ value }) {
 
@@ -12,7 +14,7 @@ export default function Product({ value }) {
           <p className="info">{value.data.normal_text}</p>
         </article>
         <article className="img">
-          <img src={value.data.image} alt="" />
+          <img src={value.data.image ? value.data.image : noPicture} alt="" />
         </article>
       </Link>
     </div>

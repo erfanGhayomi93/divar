@@ -1,17 +1,23 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import {Link , useHistory } from "react-router-dom";
 import context from "./../../context";
-import Gallery from "./Gallery"
+import Gallery from "./Gallery";
 
 export default function DetailProducts({ data }) {
   const { clickedFilter } = useContext(context);
+  const history = useHistory();
+
+  // console.log(data);
 
   return (
     <div className="Detail-products">
       <div className="header-details">
-        <Link onClick={() => clickedFilter("")} to="/">
+        <span onClick={() => history.goBack()}>
           بازگشت
-        </Link>
+        </span> 
+
+         <Link onClick={() => clickedFilter("")} to="/">همه آگهی ها</Link>
+        
       </div>
 
       <div className="body-details">
