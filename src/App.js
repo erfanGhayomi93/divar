@@ -10,8 +10,9 @@ function App() {
   const [modalCity, setModalCity] = useState(false);
   const [data, setData] = useState({
     res: {},
+    city: "tehran",
     loading: true,
-    city: "tehran"
+    error : false    
   });
 
   useEffect(() => {
@@ -21,14 +22,13 @@ function App() {
 
   const forwardRequest = url => {
     setData({ ...data, loading: true });
-    axios.get(url).then(
+    axios(url).then(
       response => {
-        setData({ ...data, res: response.data, loading: false });
+        setData({ ...data, res: response.data, loading: false ,error : false });
       },
       error => {
-        console.log(error);
-        alert("در دریافت اطلاعات مشکلی به وجود آمده");
-        setData({ ...data, loading: false });
+        alert(error);
+        setData({ ...data, loading: false , error:true });
       }
     );
   };

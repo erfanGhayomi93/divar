@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import noPicture from "./no-picture.png";
+import noPicture from "./images/no-picture.png";
 
 
 export default function Product({ value }) {

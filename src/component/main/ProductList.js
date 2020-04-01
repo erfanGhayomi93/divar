@@ -3,7 +3,7 @@ import Product from "./Product";
 import context from "./../../context";
 import Loading from "../Loading";
 
-export default function ProductList({isSearch}) {
+export default function ProductList({ isSearch }) {
   const { data } = useContext(context);
 
   return (
@@ -11,8 +11,14 @@ export default function ProductList({isSearch}) {
       <div className="seo_details">
         {data.res.seo_details ? data.res.seo_details.title : ""}
       </div>
-      
-      {!data.loading ? (
+
+      {data.loading ? (
+        <Loading />
+      ) : data.error ? (
+        <div className="text-center w-100 pt-4 font-weight-bold">
+          please install Moesif CORS extention
+        </div>
+      ) : data.res.widget_list ? (
         data.res.widget_list
           .filter(item => {
             if (isSearch === null || !isSearch.length) return true;
@@ -25,7 +31,7 @@ export default function ProductList({isSearch}) {
           })
           .map((product, index) => <Product key={index} value={product} />)
       ) : (
-        <Loading />
+        ""
       )}
     </div>
   );
