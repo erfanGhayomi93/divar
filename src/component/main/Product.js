@@ -6,7 +6,7 @@ import noPicture from "./images/no-picture.png";
 export default function Product({ value }) {
 
   return (
-    <div className="product" >
+    <div className="product" data-aos="fade-up" >
       <Link to={`/${value.data.token}`}>
         <article className="item">
           <p className="title">{value.data.title}</p>
