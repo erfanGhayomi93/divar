@@ -9,7 +9,7 @@ export default function ProductList({ isSearch }) {
   const { data } = useContext(context);
 
   useEffect(()=>{
-    aos.init({duration : 1000})
+    aos.init({duration : 1000 , once : true})
   })
 
   return (

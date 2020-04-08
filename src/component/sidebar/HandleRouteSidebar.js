@@ -4,13 +4,8 @@ import SubmenuOne from "./submenu-one";
 import SubmenuTwo from "./submenu-two";
 import { dataSubmenuTwo, dataSubmenuThree } from "./data";
 import SubmenuThree from "./submenu-three";
-import DetailsProducts from "./../main/DetailProducts";
 
-// import context from "../../context";
-
-export default function HandleRouteSidebar() {
-  // const {data} = useContext(context)
-  //  console.log(`/${data.city}/${dataSubmenuTwo["realEstate"].title.route}`)
+export default function HandleRouteSidebar() {  
   return (
     <div className="aside">
       <p className="title">دسته بندی ها</p>
@@ -45,10 +40,6 @@ export default function HandleRouteSidebar() {
             </Route>
           ))
         )}
-
-        <Route path={`test`} exact>
-          <DetailsProducts />
-        </Route>
 
       </Switch>
     </div>
