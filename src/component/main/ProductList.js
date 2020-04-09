@@ -1,16 +1,16 @@
-import React, { useContext ,useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import Product from "./Product";
 import context from "./../../context";
 import Loading from "../Loading";
 import aos from "aos";
-import "aos/dist/aos.css"
+import "aos/dist/aos.css";
 
 export default function ProductList({ isSearch }) {
   const { data } = useContext(context);
 
-  useEffect(()=>{
-    aos.init({duration : 1000 , once : true})
-  })
+  useEffect(() => {
+    aos.init({ duration: 1000, once: true });
+  });
 
   return (
     <div className="product-list">
@@ -26,7 +26,7 @@ export default function ProductList({ isSearch }) {
         </div>
       ) : data.res.widget_list ? (
         data.res.widget_list
-          .filter(item => {
+          .filter((item) => {
             if (isSearch === null || !isSearch.length) return true;
 
             if (item.data.title.includes(isSearch)) return true;

@@ -1,11 +1,11 @@
-import React from "react";
+import React, { memo } from "react";
 import { Switch, Route } from "react-router-dom";
 import SubmenuOne from "./submenu-one";
 import SubmenuTwo from "./submenu-two";
 import { dataSubmenuTwo, dataSubmenuThree } from "./data";
 import SubmenuThree from "./submenu-three";
 
-export default function HandleRouteSidebar() {  
+const HandleRouteSidebar = memo(() => {  
   return (
     <div className="aside">
       <p className="title">دسته بندی ها</p>
@@ -44,4 +44,6 @@ export default function HandleRouteSidebar() {
       </Switch>
     </div>
   );
-}
+})
+
+export default HandleRouteSidebar;
